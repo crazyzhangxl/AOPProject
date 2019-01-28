@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AOPProject</string>
+    <string name="login_state">登陆状态:%b</string>
+</resources>
