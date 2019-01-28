@@ -25,6 +25,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_user);
         initViews();
         initListener();
+        updateState();
     }
 
     private void initViews() {
