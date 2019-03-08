@@ -1,19 +1,17 @@
-apply plugin: 'com.android.application'
-apply plugin: 'android-aspectjx'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 26
+
     defaultConfig {
-        applicationId "com.example.aopproject"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        /**
-         *  切忌 一定要在使用ARouter的module里面加入 options
-         */
+        // 使用arouter 需要加入该options
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
@@ -22,29 +20,24 @@ android {
 
     }
 
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
-        }
-    }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.1'
-    // 引入sapectJ
-    compile 'org.aspectj:aspectjrt:1.8.13'
 
-    // 引入arouter编译环境
+    // 运入aRouter库
+    api 'com.alibaba:arouter-api:1.4.1'
+    // 引入aRouter编译
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
-    // 引入低层module
-    api project(':module')
+
 }

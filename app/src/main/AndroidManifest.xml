@@ -20,8 +20,14 @@
         <activity
             android:name=".login_demo.LoginActivity"
             android:label="登陆界面" />
-        <activity android:name=".login_demo.UserActivity"
-            android:label="用户界面"/>
+        <activity
+            android:name=".login_demo.UserActivity"
+            android:label="用户界面" />
+        <activity android:name=".arouter.ARouterMainActivity" />
+        <activity android:name=".arouter.testactivity.Test2Activity" />
+        <activity android:name=".arouter.testactivity.TestWebViewActivity" />
+        <activity android:name=".arouter.testactivity.Test1Activity" />
+        <activity android:name=".arouter.testactivity.Test4Activity"></activity>
     </application>
 
 </manifest>

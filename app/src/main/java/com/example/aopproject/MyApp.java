@@ -2,6 +2,9 @@ package com.example.aopproject;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Debug;
+
+import com.alibaba.android.arouter.launcher.ARouter;
 
 /**
  * @author crazyZhangxl on 2019/1/28.
@@ -13,6 +16,12 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
         mContext = this;
+       if (BuildConfig.DEBUG) {
+           ARouter.openLog();
+           ARouter.openDebug();
+       }
+        // 尽可能早，推荐在Application中初始化
+        ARouter.init(this);
     }
 
     public static Context getmContext() {

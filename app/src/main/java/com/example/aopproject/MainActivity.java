@@ -3,9 +3,9 @@ package com.example.aopproject;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
+import com.example.aopproject.arouter.ARouterMainActivity;
 import com.example.aopproject.login_demo.UserActivity;
 
 import java.text.SimpleDateFormat;
@@ -28,10 +28,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         findViewById(R.id.btnLoginExample).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, UserActivity.class));
+            }
+        });
+
+        findViewById(R.id.btnARouter).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ARouterMainActivity.class));
             }
         });
     }
