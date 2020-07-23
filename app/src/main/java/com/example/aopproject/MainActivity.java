@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.example.aopproject.arouter.ARouterMainActivity;
 import com.example.aopproject.login_demo.UserActivity;
+import com.example.aopproject.reviewaop.ReviewAopActivity;
 
 import java.text.SimpleDateFormat;
 
@@ -40,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ARouterMainActivity.class));
+            }
+        });
+
+        findViewById(R.id.btnReviewAop).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ReviewAopActivity.class));
             }
         });
     }

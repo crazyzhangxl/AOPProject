@@ -41,7 +41,7 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.1'
     // 引入sapectJ
-    compile 'org.aspectj:aspectjrt:1.8.13'
+    implementation 'org.aspectj:aspectjrt:1.9.5'
 
     // 引入arouter编译环境
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'

@@ -2,7 +2,6 @@ package com.example.aopproject;
 
 import android.app.Application;
 import android.content.Context;
-import android.os.Debug;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 

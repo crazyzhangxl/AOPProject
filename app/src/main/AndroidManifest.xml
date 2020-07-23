@@ -17,6 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".reviewaop.ReviewAopActivity" />
         <activity
             android:name=".login_demo.LoginActivity"
             android:label="登陆界面" />
@@ -27,7 +28,7 @@
         <activity android:name=".arouter.testactivity.Test2Activity" />
         <activity android:name=".arouter.testactivity.TestWebViewActivity" />
         <activity android:name=".arouter.testactivity.Test1Activity" />
-        <activity android:name=".arouter.testactivity.Test4Activity"></activity>
+        <activity android:name=".arouter.testactivity.Test4Activity" />
     </application>
 
 </manifest>
